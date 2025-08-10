@@ -7,11 +7,11 @@ const Redis = require("ioredis");
 const { RateLimiterRedis } = require("rate-limiter-flexible");
 const { rateLimit } = require("express-rate-limit");
 const { RedisStore } = require("rate-limit-redis");
+const { config } = require("./config");
 
 const app = express();
-const redis = new Redis();
 
-const radisClient = new Redis(process.env.REDIS_URL);
+const radisClient = new Redis(config.REDIS_URL);
 
 const rateLimiter = new RateLimiterRedis({
   storeClient: radisClient,

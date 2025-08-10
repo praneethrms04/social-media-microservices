@@ -1,6 +1,6 @@
-const logger = require("../../../post-service/src/utils/logger");
 const jwt = require("jsonwebtoken");
 const config = require("../config");
+const logger = require("../utils/logger");
 
 const validateToken = (req, res, next) => {
   const authHeaders = req.headers["authorization"];

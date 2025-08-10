@@ -8,12 +8,11 @@
  COPY package*.json ./
 
  #install all the dependencies
-#  RUN npm install
-RUN npm ci --only=production
+ RUN npm install
 
  COPY  . .
 
- #Expose port 3001
+ #Expose port 3003
  EXPOSE 3001
 
  #command the running the project 

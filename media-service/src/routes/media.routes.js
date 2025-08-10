@@ -4,9 +4,8 @@ const {
   uploadMedia,
   getMediaUrls,
 } = require("../controllers/media.controller");
-const {
-  isAuthenticated,
-} = require("../../../post-service/src/middleware/auth");
+
+const { isAuthenticated } = require("../middleware/auth");
 
 const mediaRouter = express.Router();
 

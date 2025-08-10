@@ -7,9 +7,8 @@
  #Add the source code to app
  COPY package*.json ./
 
- #install all the dependencies
 #  RUN npm install
-RUN npm ci --only=production
+ RUN npm install
 
  COPY  . .
 
@@ -18,3 +17,5 @@ RUN npm ci --only=production
 
  #command the running the project 
  CMD [ "node", "src/server.js" ]
+
+ 

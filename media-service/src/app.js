@@ -3,7 +3,6 @@ const helmet = require("helmet");
 const cors = require("cors");
 const errorHandler = require("./middleware/errorHandler");
 const mediaRouter = require("./routes/media.routes");
-const { isAuthenticated } = require("../../post-service/src/middleware/auth");
 
 const bodyParser = require("body-parser");
 

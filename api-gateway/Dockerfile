@@ -9,7 +9,7 @@
 
  #install all the dependencies
 #  RUN npm install
-RUN npm ci --only=production
+RUN npm install
 
  COPY  . .
 
